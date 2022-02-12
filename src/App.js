@@ -5,10 +5,20 @@ import Navi from "./Navi";
 import ProductList from "./ProductList";
 
 export default class App extends Component {
-  state={currentCategory:""}
+  state={currentCategory:"", products: []}
 
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
+  };
+
+  componentDidMount(){
+    this.getProducts()
+  }
+
+  getProducts = () => {
+    fetch("http://localhost:3000/products")
+    .then(response=>response.json())
+    .then(data=>this.setState({products:data}))
   };
 
   render() {
@@ -24,7 +34,7 @@ export default class App extends Component {
             <Category currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} info={categoryInfo} />
           </Col>
           <Col xs="9">
-            <ProductList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} info={productInfo} />
+            <ProductList products={this.state.products} currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} info={productInfo} />
           </Col>
         </Row>
       </Container>
