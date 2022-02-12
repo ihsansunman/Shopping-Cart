@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Nav, NavItem, NavLink, DropdownItem, Dropdown, DropdownToggle, DropdownMenu } from "reactstrap";
+import { Container, Nav, NavItem, NavLink} from "reactstrap";
 
 export default class Navi extends Component {
   render() {
@@ -11,18 +11,6 @@ export default class Navi extends Component {
               Link
             </NavLink>
           </NavItem>
-          <Dropdown nav toggle={function noRefCheck() {}}>
-            <DropdownToggle caret nav>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
           <NavItem>
             <NavLink href="#">Link</NavLink>
           </NavItem>
