@@ -9,13 +9,16 @@ export default class Category extends Component {
     ],
     currentCategory: "",
   };
+
+  changeCategory = (category)=> {this.setState({currentCategory: category.categoryName})}
+
   render() {
     return (
       <Container>
         <ListGroup>
           <ListGroupItem color="success">{this.props.info.title}</ListGroupItem>
           {this.state.categories.map((category) => (
-            <ListGroupItem onClick={() => this.setState({currentCategory: category.categoryName})} key={category.categoryId}>{category.categoryName}</ListGroupItem>
+            <ListGroupItem onClick={() => this.changeCategory(category)} key={category.categoryId}>{category.categoryName}</ListGroupItem>
           ))}
         </ListGroup>
         <h5>{this.state.currentCategory}</h5>
