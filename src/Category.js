@@ -23,7 +23,6 @@ export default class Category extends Component {
             </ListGroupItem>
           ))}
         </ListGroup>
-        <h5>{this.props.currentCategory}</h5>
       </Container>
     );
   }
