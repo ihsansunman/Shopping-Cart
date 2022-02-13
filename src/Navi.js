@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import {
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
   Nav,
   NavItem,
   NavLink,
@@ -12,8 +8,8 @@ import {
   NavbarToggler,
   Collapse,
   NavbarText,
-  Badge,
 } from "reactstrap";
+import CartSummary from "./CartSummary";
 
 export default class Navi extends Component {
   render() {
@@ -35,21 +31,7 @@ export default class Navi extends Component {
             </Nav>
             <Nav navbar>
               <NavbarText>Simple Text</NavbarText>
-              <UncontrolledDropdown inNavbar nav>
-                <DropdownToggle caret nav>
-                  Cart -
-                  <Badge color="success" pill>
-                    {this.props.cart.length}
-                  </Badge>
-                </DropdownToggle>
-                <DropdownMenu right>
-                  {this.props.cart.map((cart) => (
-                    <DropdownItem>Product Name</DropdownItem>
-                  ))}
-                  <DropdownItem divider />
-                  <DropdownItem>Clear Cart</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <CartSummary cart={this.props.cart}/>
             </Nav>
           </Collapse>
         </Navbar>
