@@ -31,7 +31,10 @@ export default class Navi extends Component {
             </Nav>
             <Nav navbar>
               <NavbarText>Simple Text</NavbarText>
-              <CartSummary cart={this.props.cart}/>
+              <CartSummary
+                removeFromCart={this.props.removeFromCart}
+                cart={this.props.cart}
+              />
             </Nav>
           </Collapse>
         </Navbar>
