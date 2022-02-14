@@ -4,7 +4,7 @@ import Category from "./Category";
 import Navi from "./Navi";
 import ProductList from "./ProductList";
 import alertify from "alertifyjs";
-import { Switch, Route} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import NotFound from "./NotFound";
 import CartList from "./CartList";
 
@@ -76,7 +76,17 @@ export default class App extends Component {
                   />
                 )}
               />
-              <Route exact path="/cart" component={CartList} />
+              <Route
+                exact
+                path="/cart"
+                render={(props) => (
+                  <CartList
+                    {...props}
+                    cart={this.state.cart}
+                    removeFromCart={this.removeFromCart}
+                  />
+                )}
+              />
               <Route component={NotFound} />
             </Switch>
           </Col>

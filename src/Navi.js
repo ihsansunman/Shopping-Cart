@@ -15,7 +15,7 @@ export default class Navi extends Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" expand="md" dark>
+        <Navbar color="dark" expand="md" dark mb="3">
           <NavbarBrand href="/">Shopping Cart</NavbarBrand>
           <NavbarToggler onClick={function noRefCheck() {}} />
           <Collapse navbar>
