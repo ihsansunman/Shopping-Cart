@@ -45,6 +45,11 @@ Start the server
   npm start
 ```
 
+## Packages
+
+- Reactstrap
+- AlertifyJS
+- React Router
 
 ## Authors
 
