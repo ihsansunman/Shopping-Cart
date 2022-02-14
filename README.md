@@ -41,7 +41,6 @@ Install dependencies
 Start the server
 
 ```bash
-  cd api
   json-server --watch db.json
   npm start
 ```
