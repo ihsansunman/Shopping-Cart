@@ -7,8 +7,9 @@ import {
   NavbarBrand,
   NavbarToggler,
   Collapse,
-  NavbarText,
+  NavbarText
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import CartSummary from "./CartSummary";
 
 export default class Navi extends Component {
@@ -16,7 +17,7 @@ export default class Navi extends Component {
     return (
       <div>
         <Navbar color="dark" expand="md" dark mb="3">
-          <NavbarBrand href="/">Shopping Cart</NavbarBrand>
+          <NavbarBrand><Link style={{color: 'white'}} to="">Go to cart</Link></NavbarBrand>
           <NavbarToggler onClick={function noRefCheck() {}} />
           <Collapse navbar>
             <Nav className="me-auto" navbar>

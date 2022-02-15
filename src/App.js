@@ -11,6 +11,8 @@ import CartList from "./CartList";
 export default class App extends Component {
   state = { currentCategory: "", products: [], cart: [] };
 
+ 
+
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
     this.getProducts(category.id);
@@ -45,6 +47,7 @@ export default class App extends Component {
   removeFromCart = (product) => {
     let newCart = this.state.cart.filter((c) => c.product.id !== product.id);
     this.setState({ cart: newCart });
+    alertify.error(product.productName + " remove from cart!");
   };
 
   render() {
