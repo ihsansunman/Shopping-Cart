@@ -7,31 +7,32 @@ import {
   NavbarBrand,
   NavbarToggler,
   Collapse,
-  NavbarText
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import CartSummary from "./CartSummary";
+import "./App.scss";
 
 export default class Navi extends Component {
   render() {
     return (
-      <div>
-        <Navbar color="dark" expand="md" dark mb="3">
-          <NavbarBrand><Link style={{color: 'white'}} to="">Go to cart</Link></NavbarBrand>
+      <div className={"navi"}>
+        <Navbar fixed="top" color="dark" expand="md" dark mb="3">
+          <NavbarBrand>
+            <Link className="link" to="">
+              Shopping Cart
+            </Link>
+          </NavbarBrand>
           <NavbarToggler onClick={function noRefCheck() {}} />
           <Collapse navbar>
             <Nav className="me-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  GitHub
-                </NavLink>
+                <NavLink href="https://github.com/ihsansunman">GitHub</NavLink>
               </NavItem>
             </Nav>
             <Nav navbar>
-              <NavbarText>Simple Text</NavbarText>
+              <NavItem>
+                <NavLink href="https://asnus.com">Asnus</NavLink>
+              </NavItem>
               <CartSummary
                 removeFromCart={this.props.removeFromCart}
                 cart={this.props.cart}

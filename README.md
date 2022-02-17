@@ -50,6 +50,7 @@ Start the server
 - Reactstrap
 - AlertifyJS
 - React Router
+- SASS
 
 ## Authors
 

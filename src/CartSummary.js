@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   Badge,
 } from "reactstrap";
+import "./App.scss"
 
 export default class CartSummary extends Component {
   renderSummary() {
@@ -20,7 +21,7 @@ export default class CartSummary extends Component {
           </DropdownItem>
         ))}
         <DropdownItem divider />
-        <DropdownItem><Link to="cart">Go to cart</Link></DropdownItem>
+        <DropdownItem><Link className="cart" to="cart">Go to cart</Link></DropdownItem>
       </DropdownMenu>
     );
   }
