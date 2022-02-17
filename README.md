@@ -10,13 +10,7 @@ It is a shopping site prepared using React.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-## Demo
-
-Coming Soon
-
+![Screenshot](https://raw.githubusercontent.com/ihsansunman/Shopping-Cart/main/screenshot.png)
 
 ## Run Locally
 
