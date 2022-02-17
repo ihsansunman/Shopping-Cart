@@ -10,7 +10,7 @@ It is a shopping site prepared using React.
 
 ## Screenshots
 
-![Screenshot](https://raw.githubusercontent.com/ihsansunman/Shopping-Cart/main/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/ihsansunman/Shopping-Cart/master/screenshot.png)
 
 ## Run Locally
 
